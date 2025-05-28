@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            font-style: italic; /* 모든 요소에 이탤릭체 적용 */
+        }
+
+        p{
+            color: blue; font-size : 20px; background-color: transparent;
+        }
+
+        /* 파운드(#) 다음에 id 이름 지정*/
+        #p {
+            color: red; font-size : 40px;
+        }
+
+        /* 마침표(.) 다음에 클래스 이름 지정*/
+        .p {
+            color: #008000; font-size : 30px;
+        }
+        
+        /* 똑같은 p 태그를 2개 썼더라면 맨 밑에꺼 적용 */
+        p {
+            color: #ffff00; font-size : 20px;
+        }
+
+        div> h1 > .naver {
+            color: hsl(0, 59%, 41%);
+        }
+
+        .naver {
+            color: rgba(49, 218, 49, 0.295);
+            text-decoration: none; /* 밑줄 제거 */
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="color: red; font-size : 40px;">제목</h1>
+    <div>내용1</div>
+    <p>내용2-1</p>
+    <p id="p">내용2-2</p>
+    <p class="p">내용2-3</p>
+
+    <!--  id와 클래스가 동시에 적용된 경우, id가 우선순위가 높다 -->
+    <p id="p" class="p">내용2-4</p>
+
+    <p>
+        <span>내용2-5</span>
+    </p>
+    <span>내용3</span>
+
+    <div>
+        <h1>
+            <a class="naver" href="">네이버</a>
+        </h1>
+    </div>
+</body>
+</html>
