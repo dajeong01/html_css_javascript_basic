@@ -22,8 +22,53 @@
      -->
     <div class="buttons">
         <div>버튼1</div>
-        <a href="">버튼2</a>
+        <a href="#button2">버튼2</a>
         <button>버튼3</button>
     </div>
+    <div id = "button2">
+    </div>
+    <div class="check">
+        <!-- checkbox는 다중 선택 가능 -->
+        <input type="checkbox">
+        <label for="">축구</label>
+        <input type="checkbox">
+        <label for="">농구</label>
+
+        <!-- radio는 name 같게해서! 하나만 체크 -->
+        <input type="radio" name="s" id="">
+        <label for="">선택1</label>
+        <input type="radio" name="s" id="">
+        <label for="">선택2</label>
+        <input type="radio" name="s" id="">
+        <label for="">선택3</label>
+    </div>
+
+    <!-- :not – 특정 요소를 제외하고 스타일 적용 -->
+    <div class="not">
+        <input type="text">
+        <input type="text" id="text2">
+        <input type="text">
+    </div>
+
+    <ul class="menu-list">
+        <li>메뉴1 
+            <div class="menu-info">메뉴1입니다.</div>
+        </li>
+        <li>메뉴2
+
+        </li>
+        <li>메뉴3
+            <div></div>
+        </li>
+    </ul>
+
+<!--nth-child(n) n번째 자식 요소에 스타일 적용
+    nth-of-type(n) n번째 같은 타입의 자식 요소에 스타일 적용-->
+    <ul class="menu-list2">
+        <li>java</li>
+        <li>python</li>
+        <li>c++</li>
+        <li>javascript</li>
+    </ul>
 </body>
 </html>

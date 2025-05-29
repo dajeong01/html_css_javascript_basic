@@ -64,5 +64,74 @@ div > h1 ~ p {
         &:active {
             background-color: #eee;
         }
+
+        &:disabled {
+            background-color: red;      /* 비활성화된 버튼 배경색 변경 */
+            cursor: default;
+        }
     }
+}
+
+#button2:target {
+    width: 3rem;                   /* 버튼2가 타겟되었을 때 너비 변경 */
+    height: 3rem;                  /* 버튼2가 타겟되었을 때 높이 변경 */
+    background-color: red;       /* 버튼2가 타겟되었을 때 배경색 변경 */
+}
+
+.check > input[type="checkbox"] + label{
+    color: blue;                /* 체크박스 옆 레이블 색상 변경 */
+}
+
+.check > input[type="checkbox"]:checked + label{
+    color: red;                 /* 체크박스가 체크되었을 때 레이블 색상 변경 */
+}
+
+.check > input[type="radio"] + label{
+    color: blue;                
+}
+
+.check > input[type="radio"]:checked + label{
+    color: red;                
+}
+
+.not > input:not(#text2){
+    background-color: green;
+}
+
+.menu-list {
+    & > li {
+        position: relative;
+        border: 0.1rem solid #dbdbdb;
+        width: fit-content; 
+        cursor: pointer;
+
+        & > div {
+            display: none;          /* 기본적으로 숨김 */
+        }
+        
+        &:active > div {
+            display: block;         /* 마우스 클릭 시 보이도록 설정 */
+            position: absolute;
+            top: 0;
+            right: -22rem;
+            background-color: yellow;
+            width: 20rem;
+        }
+    }
+}
+
+.menu-list2 li:nth-of-type(2n) {  /* 2의 배수들, 홀수 원하면 2n-1 */
+    color: brown;               /* 두 번째 li 요소의 글자 색상을 갈색으로 변경 */
+}
+
+/*  ::before : 특정 요소의 앞에 지정한 콘텐츠 추가
+    ::after : 특정 요소의 뒤에 지정한 콘텐츠 추가  */
+.menu-list2 > li::before{
+    content: "menu : ";             /* li 요소 앞에 "menu"라는 텍스트 추가 */
+    border: 0.1rem solid #dbdbdb; 
+    color: purple;
+}
+
+.menu-list2 > li::after{
+    content: " ->";                 /* li 요소 뒤에 "->"라는 텍스트 추가 */
 }
