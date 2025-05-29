@@ -1,0 +1,71 @@
+html { 
+    font-size: 62.5%; /* 기본 폰트 크기 설정 */
+}
+
+.p-box{
+    position: relative;
+    box-sizing: border-box;
+    border: 0.1rem solid #222;
+    width: 50rem;
+    height: 50rem;
+}
+
+.c-box {
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 1s ease-in-out;  /* 부드럽게 바뀜 */
+    box-sizing: border-box;
+    border: 0.1rem solid #222;
+    width: 10rem;
+    height: 10rem;
+
+    &:hover {
+        /* 중심은 유지하면서 크기와 회전이 변경됨 */
+        transform: translate(-50%, -50%)scale(1.5) rotate(45deg);
+        border-radius: 50%;         /* 둥글게 변경 */
+    }
+}
+
+.a-box1, .a-box2 {
+    box-sizing: border-box;
+    border: 0.1rem solid #222;
+    width: 10rem;
+    height: 10rem;  
+}
+
+@keyframes a1 {
+    from {transform: scale(1);}
+    to {transform: scale(2);}
+}
+
+@keyframes a2 {
+    0% {
+        transform: translateX(0);      
+    }
+    10% {
+        transform: translateX(20%);
+    }
+    20% {
+        transform: translate(20%,20%);
+    }
+    100% {
+        transform: translate(100%,100%);
+    }
+}
+
+.a-box1 {
+    animation-name: a1;
+    animation-duration: 3s;
+    animation-iteration-count: 2;    /* 2번 반복 , infinite는 무한 반복*/
+    animation-direction: alternate;  /* 애니메이션 방향을 번갈아가며 실행 */
+}
+
+.a-box2 {
+    animation-name: a2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite; /* 무한 반복 */
+    animation-direction: alternate; 
+}
