@@ -1,0 +1,9 @@
+.background-container {
+    background-image: url(C:\Users\user\Pictures\바탕화면원본.jpg); /* 배경 이미지 설정 */
+    background-position: center center; /* 배경 이미지 중앙 정렬 */
+    background-size: contain;
+    background-repeat: no-repeat;       /* 배경 이미지 반복 안함 */
+    background-attachment: fixed;       /* 배경 이미지 고정 */
+    height: 1080px;                     /* 배경 이미지 높이 설정 */
+
+}

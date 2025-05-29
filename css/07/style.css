@@ -1,0 +1,68 @@
+html {
+    font-size: 62.5%; /* 기본 폰트 크기 설정 */
+    background-color: #fafafa;
+}
+div > h1 ~ p {
+/* div > h1 + p { 비교하기 */
+    color: red;
+}
+
+.buttons {
+
+    & > div { 
+        box-sizing: border-box;         /* 테두리와 패딩을 포함한 크기 계산 */
+        border: 0.1rem solid #dbdbdb; /* 테두리 설정 */
+        border-radius: 0.4rem;;
+        background-color: #fff;
+        padding: 0.5rem 1rem;
+        width: fit-content;             /* 내용에 맞게 너비 설정 */
+        cursor : pointer;               /* 마우스 커서 포인터로 변경 */
+
+        &:hover {
+            background-color: #fafafa;
+        }
+
+        &:active {
+            background-color: #eee;
+        }
+    }
+
+    & > a{
+        box-sizing: border-box;         /* 테두리와 패딩을 포함한 크기 계산 */
+        border: 0.1rem solid #dbdbdb; /* 테두리 설정 */
+        border-radius: 0.4rem;;
+        background-color: #fff;
+        padding: 0.5rem 1rem;
+        width: fit-content;             /* 내용에 맞게 너비 설정 */
+        cursor : pointer;               /* 마우스 커서 포인터로 변경 */
+        color: #222;
+        text-decoration: none;          /* 밑줄 제거 */
+
+        &:hover {
+            background-color: #fafafa;
+        }
+
+        &:active {
+            background-color: #eee;
+        }
+
+    }
+
+    & > button {
+        box-sizing: border-box;         /* 테두리와 패딩을 포함한 크기 계산 */
+        border: 0.1rem solid #dbdbdb; /* 테두리 설정 */
+        border-radius: 0.4rem;;
+        background-color: #fff;
+        padding: 0.5rem 1rem;
+        width: fit-content;             /* 내용에 맞게 너비 설정 */
+        cursor : pointer;               /* 마우스 커서 포인터로 변경 */
+
+        &:hover {
+            background-color: #fafafa;
+        }
+
+        &:active {
+            background-color: #eee;
+        }
+    }
+}
