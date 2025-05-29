@@ -1,0 +1,32 @@
+/* 
+justify-content:        가로선 상에서 정렬 
+align-items:            세로선 상에서 정렬
+align-content:          여러 줄이 있을 때, 세로선 상에서 정렬
+align-self:             개별 flexbox의 세로선 상에서 정렬
+order:                  flexbox의 순서 설정
+flex-wrap:              줄바꿈 여부
+flex-direction:         flexbox의 방향 설정
+flex-flow:              flexbox의 방향과 줄바꿈 설정
+ */
+html{
+    font-size: 62.5%; 
+}
+
+.box1 {
+    display: flex;     
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-content: center;         
+    box-sizing: border-box;
+    border: 0.1rem solid #222;
+    width: 30rem;
+    height: 20rem;
+
+}
+
+.box2 {
+    box-sizing: border-box;
+    border: 0.1rem solid #222;
+    width: 10rem;
+    height: 5rem;
+}   
