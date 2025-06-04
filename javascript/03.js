@@ -73,3 +73,4 @@ for (let entry of loginButtonEntries){
     const value = entry[1];
     console.log(entry, key, value);
 }
+
