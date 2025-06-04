@@ -5,13 +5,13 @@ await 키워드는 async 함수 안에서만 사용가능!!!(단, 전역 호출�
 async function fx1(isOk) {
     console.log("fx1 호출")
     if(!isOk) throw new Error("오류 발생");
-    return "정상 리턴";
+    return "정상 리턴1";
 }
 
 const fx2 = async (isOk) => {
     console.log("fx2 호출");
         if(!isOk) throw new Error("오류 발생");
-    return "정상 리턴";
+    return "정상 리턴2";
 }
 
 async function main() {
@@ -24,7 +24,7 @@ async function main() {
     .catch(error => console.error(error))
     console.log("fx1 응답!!!!!!!!!!!!!!")
 
-    let r2 = await fx1(true);
+    let r2 = await fx2(true);
     // let r2 = await fx1(false); 이럴때는 예외 처리 따로 해줘야함
     console.log(r2);
     console.log("fx2 응답!!!!!!!!!!!!!")
