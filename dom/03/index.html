@@ -69,7 +69,7 @@
             rightBox.innerHTML = selectedBookList.map(book => `<li>${book.id}. ${book.title}(${book.price}원)</li>`).join("");
         }
 
-        const moveButton = document.querySelector(".mid-box > button");
+        const moveButton = document.querySelector(".mid-box > button")[0];
         moveButton.onclick = () => {
             const numberInput = document.querySelector(".mid-box > input");
             const numberInputValue = numberInput.value;
@@ -90,7 +90,22 @@
             reload();
         }
 
+        function isEmpty(str) {
+            if(!str) {
+                alert("도서 번호를 입력하세요.")
+            };
+            return !str;
+        }
 
+        const deleteButton = document.querySelector(".mid-box > button")[1];
+        deleteButton.onclick = () => {
+            const numberInput = document.querySelector(".mid-box > input");
+            const numberInputValue = numberInput.value;
+                
+            if (isEmpty(numberInputValue))return;
+            selectedBookList = selectedBookList.filter(book => book.id !== parseInt(numberInputValue))
+            reload();
+        }
 
     </script>
 </body>
