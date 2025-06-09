@@ -3,6 +3,6 @@ window.onload = () => {
     render(root);
 }
 
-function render(rootElement) {
-    rootElement.innerHTML = app();
+function render(targetElement) {
+    targetElement.innerHTML = app();
 }
